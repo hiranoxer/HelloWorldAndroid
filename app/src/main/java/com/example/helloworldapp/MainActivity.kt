@@ -7,7 +7,7 @@ import android.widget.Button
 import android.widget.TextView
 import com.example.helloworldapp.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var binding: ActivityMainBinding
     private var buttonTap: Boolean = false
 
@@ -16,14 +16,16 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.button.setOnClickListener{
-            if (buttonTap) {
-                binding.textView.text = getString(R.string.hello)
-                buttonTap = false
-            } else {
-                binding.textView.setText(R.string.world)
-                buttonTap = true
-            }
+        binding.button.setOnClickListener(this)
+    }
+
+    override fun onClick(v: View) {
+        if (buttonTap) {
+            binding.textView.text = getString(R.string.hello)
+            buttonTap = false
+        } else {
+            binding.textView.setText(R.string.world)
+            buttonTap = true
         }
     }
 }
