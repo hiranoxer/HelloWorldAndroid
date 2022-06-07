@@ -6,8 +6,19 @@ Android開発入門：ボタンをタップすると表示テキストが切り�
 ### 画面構成部品
 - activity_main.xml に部品を書く
 - ViewBindingを使って、xmlの部品にアクセスする
+
+例）
+
+activity_main.xmlファイル中、
+android:id="@+id/text_edit_view" 
+
+ViewBindingを設定したbuild.gradleとSYNCすると、
+`TextEditViewBinding`というクラスが自動生成される
+
+kotlinでは、`binding.textEditView`でアクセスできる
+
 - findViewByIdは古い
-- R.id.
+- R.id.~ は古い
 
 ### 文字列
 - res/values/strings.xmlに書く
