@@ -7,19 +7,6 @@
     android:padding="20dp"
     tools:context=".MainActivity">
 
-    <ProgressBar
-        android:id="@+id/progressbar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="30dp"
-        android:indeterminate="false"
-        style="@android:style/Widget.ProgressBar.Horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.05" />
-
     <Button
         android:id="@+id/button"
         android:text="@string/button"
@@ -44,19 +31,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.6" />
-
-    <EditText
-        android:id="@+id/edit_text"
-        android:hint="@string/hint"
-        android:textColor="#bbffbb"
-        android:textSize="15sp"
-        android:background="#accc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
